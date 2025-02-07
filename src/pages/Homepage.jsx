@@ -5,7 +5,7 @@ const Homepage = () => {
   //<Carousel/>
   //<ProgressBar/>
   //<PopularCourses/></>
-  return <div className="bg-amber-500">Homepage</div>;
+  return <div>Homepage</div>;
 };
 
 export default Homepage;
