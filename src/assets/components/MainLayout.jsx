@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
+import Header from "./Header";
 
 const MainLayout = (children) => {
   return (
     <>
-      <div className="font-inter">Import Header here</div>
+      <Header />
       <Outlet context={children} />
       <div>Import you Footer here</div>
     </>
