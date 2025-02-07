@@ -43,7 +43,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <Cursor />
+      {/* <Cursor /> */}
     </>
   );
 };
