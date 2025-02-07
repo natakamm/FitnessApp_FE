@@ -14,7 +14,13 @@ const Header = () => {
 
   return (
     <>
-      <div className="hidden md:flex justify-between items-center py-5 pr-10 pl-6 bg-black">
+      <div
+        className={`justify-between flex items-center py-8 pr-10 pl-6  ${
+          pathname === "/"
+            ? "absolute z-50 flex w-full bg-transparent"
+            : "bg-black"
+        }`}
+      >
         <figure>
           <img src={logo} alt="fitness-app-logo" width={37} />
         </figure>
