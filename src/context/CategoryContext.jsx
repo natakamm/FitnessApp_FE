@@ -25,7 +25,6 @@ export default function CategoryContextProvider({ children }) {
         setCategoriesLoading(false);
         return;
       }
-      console.log("DATA:", data.categories);
       setCategories(data.categories);
     } catch (error) {
       setCategoriesError(
@@ -36,8 +35,40 @@ export default function CategoryContextProvider({ children }) {
     }
   };
 
+  const [category, setCategory] = useState({});
+  const [categoryError, setCategoryError] = useState(null);
+  const [categoryLoading, setCategoryLoading] = useState(false);
+
+  const fetchOneCategory = async (categoryId) => {
+    setCategoryError(null);
+    setCategoryLoading(true);
+
+    try {
+      const res = await fetch(`${URL_BASE}category/${categoryId}`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setCategoryError(data.error);
+        setCategoryLoading(false);
+        return;
+      }
+      setCategory(data.category);
+    } catch (error) {
+      setCategoryError(
+        error.message || "An error occurred while fetching your category."
+      );
+    } finally {
+      setCategoryLoading(false);
+    }
+  };
+
   return (
-    <CategoryContext.Provider value={{ fetchAllCategories, categories }}>
+    <CategoryContext.Provider
+      value={{ fetchAllCategories, categories, fetchOneCategory, category }}
+    >
       {children}
     </CategoryContext.Provider>
   );
