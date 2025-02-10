@@ -21,7 +21,7 @@ const Hero = () => {
           instructions tailored to your goals.
         </p>
         <Link to="">
-          <div className="mt-10 font-inter font-semibold italic text-md text-black bg-customSecondary px-3 py-2 rounded-lg">
+          <div className="mt-10 font-inter font-semibold text-md text-black bg-customSecondary px-3 py-2 rounded-lg">
             Start Now
           </div>
         </Link>
