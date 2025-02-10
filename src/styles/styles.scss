@@ -1,0 +1,43 @@
+$arrow-color: #80ac06;
+$hover-color: #c7f00c;
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-right: 10px solid $arrow-color;
+  cursor: pointer;
+
+  &:hover {
+    border-right: 10px solid $hover-color;
+  }
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid $arrow-color;
+  cursor: pointer;
+
+  &:hover {
+    border-left: 10px solid $hover-color;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  min-width: max-content;
+}
