@@ -1,0 +1,96 @@
+$arrow-color: #80ac06;
+$hover-color: #c7f00c;
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-right: 20px solid $arrow-color;
+  cursor: pointer;
+
+  &:hover {
+    border-right: 20px solid $hover-color;
+  }
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 20px solid $arrow-color;
+  cursor: pointer;
+
+  &:hover {
+    border-left: 20px solid $hover-color;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  min-width: max-content;
+}
+
+.middle_card {
+  border-radius: 25px;
+  width: 232px;
+  transition: all 0.5s ease-in-out;
+  height: 325px;
+  opacity: 1;
+
+  h3 {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 3px;
+  }
+
+  p {
+    font-size: 10pt;
+    color: black;
+    margin-bottom: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.side_card {
+  width: 197px;
+  height: 266px;
+  opacity: 50%;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+
+  h3 {
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 2px;
+    line-clamp: 1;
+  }
+
+  p {
+    font-size: 8pt;
+    color: black;
+    margin-bottom: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.hidden_card {
+  display: none;
+}

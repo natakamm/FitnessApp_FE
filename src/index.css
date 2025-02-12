@@ -8,21 +8,7 @@
   --color-customTertiary: #80ac06;
   --color-customAccent: #444444;
   --color-customAccent2: #2f2d2c;
+  --color-customAccent3: #bbbbbb;
 
   --font-inter: "Inter", sans-serif;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll {
-  display: flex;
-  animation: scroll 25s linear infinite;
-  min-width: max-content;
 }
