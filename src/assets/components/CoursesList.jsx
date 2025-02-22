@@ -12,8 +12,8 @@ const CoursesList = () => {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen flex justify-center items-center">
-      <div className="bg-customAccent2 p-10 rounded-lg w-full max-w-6xl">
+    <div className="bg-black flex justify-center items-center">
+      <div className="bg-customAccent2 p-10 rounded-2xl w-full max-w-6xl">
         <h2 className="font-bold italic text-2xl mb-5 text-center text-white">
           Check out our most <span className="font-bold">popular Courses</span>
         </h2>
@@ -25,7 +25,7 @@ const CoursesList = () => {
         ) : error ? (
           <p className="text-red-500 text-center">{error}</p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14">
             {data.map((course) => (
               <CoursesCard key={course._id} course={course} />
             ))}
