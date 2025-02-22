@@ -8,6 +8,7 @@ import {
 import MainLayout from "./assets/components/MainLayout";
 import Homepage from "./pages/Homepage";
 import CategoriesPage from "./pages/CategoriesPage";
+import CoursePage from "./pages/CoursePage";
 
 function App() {
   const router = createBrowserRouter(
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Homepage />} />
           <Route path="/categories" element={<CategoriesPage />} />
+          <Route path="/courses" element={<CoursePage />} />
         </Route>
       </>
     )
