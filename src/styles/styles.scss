@@ -118,3 +118,48 @@ $hover-color: #c7f00c;
   width: 0%;
   border-radius: 10px;
 }
+
+.more_button {
+  display: inline-flex; // Use inline-flex instead of flex to prevent full-width stretching
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-width: 130px;
+  min-height: 40px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.5s linear;
+  position: relative; // Contain the ::before pseudo-element
+
+  &:hover .icon {
+    transform: translateX(10px); // Move the icon on hover
+  }
+}
+.icon {
+  color: white;
+  transition: all 0.5s linear;
+}
+
+.yellow {
+  background: none;
+  color: black;
+
+  &:hover::before {
+    width: calc(100% + 20px);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 100%;
+    background-color: $arrow-color;
+    position: absolute;
+    border-radius: 100px;
+    left: 0em;
+    z-index: -1;
+    transition: all 600ms ease;
+  }
+}
