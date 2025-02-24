@@ -14,9 +14,12 @@ const CoursesList = () => {
   return (
     <div className="bg-black flex justify-center items-center">
       <div className="bg-customAccent2 p-10 rounded-2xl w-full max-w-6xl">
-        <h2 className="font-bold italic text-2xl mb-5 text-center text-white">
-          Check out our most <span className="font-bold">popular Courses</span>
-        </h2>
+        <div className="mb-5 text-left text-white text-2xl">
+          <span className="font-inter font-normal">Check out our most </span>
+          <span className="font-inter font-extrabold italic">
+            popular Courses
+          </span>
+        </div>
 
         {loading ? (
           <div className="flex flex-wrap justify-center gap-6">
