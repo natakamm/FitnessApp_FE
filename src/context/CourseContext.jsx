@@ -36,6 +36,8 @@ export default function CourseContextProvider({ children }) {
         mainImage: course.mainImage,
         averageRating: course.averageRating,
         category: course.category,
+        equipment: course.equipment,
+        intensity: course.intensity,
       }));
 
       // Set the state with the extracted data
