@@ -13,7 +13,7 @@ const CoursesList = () => {
 
   return (
     <div className="bg-black flex justify-center items-center">
-      <div className="bg-customAccent2 p-10 rounded-2xl w-full max-w-6xl">
+      <div className="bg-customAccent2 p-10 rounded-2xl w-full max-w-6xl mb-26 ">
         <div className="mb-5 text-left text-white text-2xl">
           <span className="font-inter font-normal">Check out our most </span>
           <span className="font-inter font-extrabold italic">
