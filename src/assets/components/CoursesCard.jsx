@@ -6,7 +6,7 @@ const CoursesCard = ({ course, className = "" }) => {
   console.log("course data", course);
   return (
     <div
-      className={`overflow-hidden bg-customSecondary ${className} rounded-4xl shadow-lg hover:bg-customSecondary`}
+      className={`overflow-hidden ${className}   duration-300 overflow-hidden rounded-4xl shadow-lg border-2 border-transparent hover:border-customSecondary transition`}
     >
       <figure>
         <img
