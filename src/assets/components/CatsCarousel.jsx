@@ -78,6 +78,7 @@ const CatsCarousel = () => {
                   image={cat.image}
                   title={cat.title}
                   shortDescription={cat.shortDescription}
+                  description={cat.description}
                   className={cardClass}
                 />
               );
