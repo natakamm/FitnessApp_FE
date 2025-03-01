@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 
-const CarouselCard = ({ title, image, className, shortDescription }) => {
+const CarouselCard = ({
+  title,
+  image,
+  className,
+  shortDescription,
+  description,
+}) => {
   return (
     <div className={`overflow-hidden bg-customSecondary ${className}`}>
       <figure>
@@ -17,15 +23,20 @@ const CarouselCard = ({ title, image, className, shortDescription }) => {
       >
         <h3 className="font-inter line-clamp-1">{title}</h3>
         <p className="font-inter ">{shortDescription}</p>
-        <span
-          className={
-            className === "side_card"
-              ? `hidden`
-              : `self-end border-customPrimary bg-customPrimary border-2 px-3 py-0.5 rounded-md text-white font-inter text-sm hover:bg-transparent hover:text-customPrimary cursor-pointer`
-          }
+        <Link
+          to="/categories"
+          state={{ title, image, shortDescription, description }}
         >
-          More
-        </span>
+          <span
+            className={
+              className === "side_card"
+                ? `hidden`
+                : `self-end border-customPrimary bg-customPrimary border-2 px-3 py-0.5 rounded-md text-white font-inter text-sm hover:bg-transparent hover:text-customPrimary cursor-pointer`
+            }
+          >
+            More
+          </span>
+        </Link>
       </div>
     </div>
   );
